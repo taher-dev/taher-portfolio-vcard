@@ -431,6 +431,14 @@ main {
   font-style: normal;
 }
 
+.hov-yellow {
+  transition: var(--transition-1);
+}
+.hov-yellow:hover {
+  color: var(--orange-yellow-crayola);
+  transition: var(--transition-1);
+}
+
 .social-list {
   display: flex;
   justify-content: flex-start;
