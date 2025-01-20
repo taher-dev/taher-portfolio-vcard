@@ -693,18 +693,35 @@ main {
   align-items: space-between;
 }
 
-.timeline-item-p span {
+.timeline-item-p span,
+.timeline-item-p a {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   display: flex;
   align-items: center;
 
   white-space: nowrap; /* Prevent text wrapping */
+  transition: all var(--transition-1);
+}
+
+.timeline-item-p a:hover {
+  transition: all var(--transition-1);
+  color: var(--vegas-gold);
+}
+
+.timeline-item-p a:hover img {
+  transition: all var(--transition-1);
+  scale: 1.1;
 }
 
 .timeline-item-p span img {
   height: 18px;
   margin-left: auto;
+}
+.timeline-item-p a img {
+  height: 24px;
+  margin-left: auto;
+  transition: all var(--transition-1);
 }
 
 .timeline-item:not(:last-child)::before {
