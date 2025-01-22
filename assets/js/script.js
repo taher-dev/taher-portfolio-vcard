@@ -1,5 +1,29 @@
 "use strict";
 
+// Light mode toggle
+let lightMode = localStorage.getItem("lightMode");
+const themeToggle = document.querySelector("#theme-toggle");
+
+const enableLightMode = () => {
+  document.body.classList.add("lightmode");
+  localStorage.setItem("lightMode", "active");
+};
+
+const disableLightMode = () => {
+  document.body.classList.remove("lightmode");
+  localStorage.setItem("lightMode", null);
+};
+
+if (lightMode === "active") {
+  enableLightMode();
+}
+
+themeToggle.addEventListener("click", () => {
+  lightMode = localStorage.getItem("lightMode");
+  lightMode !== "active" ? enableLightMode() : disableLightMode();
+  themeToggle.classList.toggle("rotate-icon");
+});
+
 // element toggle function
 const elementToggleFunc = function (elem) {
   elem.classList.toggle("active");
