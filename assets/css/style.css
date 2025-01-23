@@ -112,7 +112,7 @@
   --smoky-black: hsl(0, 0%, 100%);
   --white-1: hsl(0, 0%, 0%);
   --white-2: hsl(0, 0%, 2%);
-  --orange-yellow-crayola: hsl(45, 100%, 48%);
+  --orange-yellow-crayola: hsl(41, 98%, 45%);
   --orange-yellow-crayola-2: hsl(45, 100%, 48%, 25%);
   --vegas-gold: hsl(45, 73%, 57%);
   --light-gray: hsl(0, 0%, 16%);
@@ -130,7 +130,7 @@
   /* Elements  */
 
   .hov-yellow:hover {
-    text-shadow: var(--jet) 0.1px 0.1px;
+    /* text-shadow: var(--jet) 0.5px 0.5px 1px; */
   }
 
   .info_more-btn {
@@ -659,7 +659,6 @@ main {
 /* From Uiverse.io by neerajbaniwal */
 .about_btn-shine {
   position: absolute;
-  /* padding-bottom: 30px; */
   bottom: 0;
   left: 50%;
   transform: translate(-50%, -50%);
