@@ -129,10 +129,6 @@
 
   /* Elements  */
 
-  .hov-yellow:hover {
-    /* text-shadow: var(--jet) 0.5px 0.5px 1px; */
-  }
-
   .info_more-btn {
     background: var(--onyx-nav);
     border-bottom: 0.1px solid var(--jet);
@@ -187,7 +183,6 @@ img,
 ion-icon,
 a,
 button,
-time,
 span {
   display: block;
 }
@@ -287,8 +282,7 @@ article.active {
 
 .h2,
 .h3,
-.h4,
-.h5 {
+.h4 {
   color: var(--white-2);
   text-transform: capitalize;
 }
@@ -303,11 +297,6 @@ article.active {
 
 .h4 {
   font-size: var(--fs-4);
-}
-
-.h5 {
-  font-size: var(--fs-7);
-  font-weight: var(--fw-500);
 }
 
 .article-title {
@@ -343,26 +332,6 @@ article.active {
 
 .has-scrollbar::-webkit-scrollbar-button {
   width: 20px;
-}
-
-.content-card {
-  position: relative;
-  background: var(--border-gradient-onyx);
-  padding: 15px;
-  padding-top: 45px;
-  border-radius: 14px;
-  box-shadow: var(--shadow-2);
-  cursor: pointer;
-  z-index: 1;
-}
-
-.content-card::before {
-  content: "";
-  position: absolute;
-  inset: 1px;
-  background: var(--bg-gradient-jet);
-  border-radius: inherit;
-  z-index: -1;
 }
 
 /*-----------------------------------*\
@@ -508,7 +477,7 @@ main {
   margin-bottom: 2px;
 }
 
-.contact-info :is(.contact-link, time, address) {
+.contact-info :is(.contact-link, address) {
   color: var(--white-2);
   font-size: var(--fs-7);
 }
@@ -1216,17 +1185,8 @@ main {
 
   /* PORTFOLIO */
 
-  .project-img,
-  .blog-banner-box {
+  .project-img {
     border-radius: 16px;
-  }
-
-  .blog-posts-list {
-    gap: 30px;
-  }
-
-  .blog-content {
-    padding: 25px;
   }
 }
 
@@ -1413,8 +1373,6 @@ main {
     width: 24px;
   }
 
-  /* ABOUT */
-
   /* PORTFOLIO */
 
   .project-list {
@@ -1527,7 +1485,7 @@ main {
     text-overflow: ellipsis;
   }
 
-  .contact-info :is(.contact-link, time, address) {
+  .contact-info :is(.contact-link, address) {
     --fs-7: 14px;
     font-weight: var(--fw-300);
   }
