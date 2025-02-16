@@ -385,6 +385,131 @@ main {
   transition: var(--transition-1);
 }
 
+/* Profile Avatar */
+.avatar-box {
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar-box img {
+  border-radius: inherit;
+  box-shadow: var(--shadow-2);
+  transition: var(--transition-1);
+  cursor: pointer;
+}
+
+/* Profile Picture Modal */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  z-index: 20;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-container.active {
+  pointer-events: all;
+  visibility: visible;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: hsl(0, 0%, 5%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1;
+  transition: var(--transition-1);
+}
+
+.overlay.active {
+  opacity: 0.8;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.profile-modal {
+  background: var(--eerie-black-2);
+  position: relative;
+  padding: 15px;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
+}
+
+.modal-container.active .profile-modal {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--onyx);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-2);
+  font-size: 18px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  opacity: 1;
+}
+
+.modal-close-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+/* Profile Picture Modal */
+.modal-avatar-box {
+  background: var(--bg-gradient-onyx);
+  max-width: 90vw; /* Max width: 90% of viewport width */
+  max-height: 80vh; /* Max height: 80% of viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: var(--shadow-2);
+  overflow: hidden;
+}
+
+/* Ensure the image scales correctly */
+.modal-avatar-box img {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* Maximum size for better scaling */
+  max-height: 400px; /* Limit height to avoid screen coverage */
+  object-fit: contain;
+  border-radius: inherit;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);

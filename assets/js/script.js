@@ -1,5 +1,29 @@
 "use strict";
 
+// Select elements
+const profileAvatar = document.querySelector("[data-profile-avatar]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
+const modalImg = document.querySelector("[data-modal-img]");
+
+// Function to toggle modal
+const toggleModal = () => {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+};
+
+// Open modal on avatar click
+profileAvatar.addEventListener("click", () => {
+  modalImg.src = profileAvatar.src;
+  modalImg.alt = profileAvatar.alt;
+  toggleModal();
+});
+
+// Close modal when clicking outside or on close button
+modalCloseBtn.addEventListener("click", toggleModal);
+overlay.addEventListener("click", toggleModal);
+
 // Light mode toggle
 let lightMode = localStorage.getItem("lightMode");
 const themeToggle = document.querySelector("#theme-toggle");

@@ -78,6 +78,7 @@
               src="./assets/images/taher-mahmud.jpg"
               alt="Taher Mahmud"
               width="80"
+              data-profile-avatar
             />
           </figure>
 
@@ -258,6 +259,27 @@
         </div>
       </aside>
 
+      <!-- Profile Picture Modal -->
+      <div class="modal-container" data-modal-container>
+        <div class="overlay" data-overlay></div>
+
+        <section class="profile-modal">
+          <button class="modal-close-btn" data-modal-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+          <div class="modal-img-wrapper">
+            <figure class="modal-avatar-box">
+              <img
+                src="./assets/images/taher-mahmud.jpg"
+                alt="Taher Mahmud"
+                data-modal-img
+              />
+            </figure>
+          </div>
+        </section>
+      </div>
+
       <!--
       - #main-content
       -->
@@ -330,6 +352,7 @@
               my skills and learn more about the fields I am interested in.
             </p>
           </section>
+
           <!-- From Uiverse.io by neerajbaniwal -->
           <a
             href="assets/docs/taher-cv.pdf"
