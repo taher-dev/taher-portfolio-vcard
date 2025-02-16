@@ -398,7 +398,7 @@ main {
   border-radius: inherit;
   box-shadow: var(--shadow-2);
   transition: var(--transition-1);
-  cursor: zoom-in;
+  cursor: pointer;
 }
 
 /* Profile Picture Modal */
